@@ -1,0 +1,31 @@
+.sucesso-cadastro{
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    top:100px;
+    left: calc(50vw - 175px);
+    background-color: rgba(95, 190, 27, 0.888);
+    border: 2px rgb(89, 255, 0) solid;
+    backdrop-filter: blur(3px);
+    padding: 20px 0 20px 0;
+}
+
+.error-cadastro > div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.error-cadastro > div >h3{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.error-cadastro > div >p{
+    font-size: 18px;
+    color: var(--white);
+}

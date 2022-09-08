@@ -1,4 +1,5 @@
 import {sectionCadastro, sectionLogin, url} from "./assets.js";
+import { mostrarErro, incrementarClickFecharErro } from "./cadastrojs";
 const buttonLogar = document.querySelector('.login form button')
 const buttonCadastre = document.querySelector('.login div > button')
 
@@ -49,3 +50,9 @@ buttonCadastre.addEventListener('click', e=>{
     sectionCadastro.classList.remove('display-none')
     sectionLogin.classList.add('display-none')
 })
+
+
+//CRIAR MODAL ERRO
+function criarModalErro(erro){
+
+}

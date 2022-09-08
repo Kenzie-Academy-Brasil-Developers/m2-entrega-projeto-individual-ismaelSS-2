@@ -1,9 +1,10 @@
-import { sectionCadastro, url} from "./assets.js";
+import {url} from "./assets.js";
 
 const buttonCadastrar = document.querySelector('.cadastro button')
 
 buttonCadastrar.addEventListener('click', e =>{
     e.preventDefault()
+    console.log(e.target)
     pegarDadosCadastro()
 })
 
@@ -32,12 +33,9 @@ function pegarDadosCadastro(){
     .then(resp => {
         console.log(resp);
     if(resp.error){
-        console.log('deu erro');
-        mostrarErroCadastro(resp.error[0])
+        mostrarErro(resp.error[0])
     }else{
-        localStorage.setItem('@BM:token', resp.token)
-        localStorage.setItem('@BM:uuid', resp.user_uuid)
-        localStorage.setItem('@BM:is_admin', resp.is_admin)
+        criarModalSucesso()
     }
     })
     .catch(erro => {
@@ -47,8 +45,8 @@ function pegarDadosCadastro(){
 };
 
 
-
-function mostrarErroCadastro(erro){
+// CRIAR MODAL ERRO CADASTRO
+function mostrarErro(erro){
     const temp = document.querySelector('.temporarios')
 
    const divErro = document.createElement('div')
@@ -71,17 +69,48 @@ function mostrarErroCadastro(erro){
    divErro.append(subDiv)
 
    temp.append(divErro)
+
+   incrementarClickFecharErro()
+   window.alert('alerta do mostrar erro pos chamada do incrementar')
 }
 
 
 // FECHAR JANELA DE ERRO
 
-const buttonFecharErro = document.querySelector('.error-cadastro div button')
+function incrementarClickFecharErro(){
+    const buttonFecharErro = document.querySelector('.temporarios div div button')
 
-buttonFecharErro.addEventListener('click', e => {
-    e.preventDefault()
-    console.log('dfdfdgdf');
+    buttonFecharErro.addEventListener('click', e => {
+        e.preventDefault()
+        // console.log('dfdfdgdf');
+        const temp = document.querySelector('.temporarios')
+
+        temp.innerHTML =''
+    })
+}
+
+
+// SUCESSO CADASTRO
+ function criarModalSucesso(){
     const temp = document.querySelector('.temporarios')
 
-    temp.innerHTML =''
-})
+   const divErro = document.createElement('div')
+   divErro.setAttribute('class', 'sucesso-cadastro')
+   
+   const subDiv = document.createElement('div')
+
+   const h3 = document.createElement('h3')
+   h3.innerText = 'Cadastro realizado com sucesso'
+
+   const p = document.createElement('p')
+   p.innerText = 'você sera redirecionado para a tela de login'
+
+   subDiv.append(h3,p)
+   divErro.append(subDiv)
+
+   temp.append(divErro)
+//    setInterval(e=>{}3000)
+//    window.alert('sdssddsds')
+ }
+
+ export{mostrarErro, incrementarClickFecharErro}
