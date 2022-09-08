@@ -1,0 +1,13 @@
+.input-padrao{
+    height: 35px;
+    border-radius: 3px;
+    font-size: 16px;
+    padding-left: 20px;
+    box-shadow: inset 26.43px 26.43px 25px var(--input-1), inset -26.43px -26.43px 25px var(--input-2);
+    backdrop-filter: blur(0px);
+    /* background-color: var(--input-3); */
+}
+
+.input-padrao::placeholder{
+    color: var(--placeholder-1);
+}

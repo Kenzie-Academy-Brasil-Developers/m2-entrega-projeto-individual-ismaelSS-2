@@ -1,0 +1,9 @@
+.button-padrao{
+    height: 35px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 3px;
+    background-color: var(--button-defalt);
+    border: 1px solid rgb(243, 243, 243);
+    color: var(--font-1);
+}

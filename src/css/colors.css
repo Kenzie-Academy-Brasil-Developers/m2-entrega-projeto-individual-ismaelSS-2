@@ -1,0 +1,70 @@
+:root {
+    --color-1: #8ECAE6 ;
+    --color-2: #219EBC ;
+    --color-3: #4d4d4d ;
+    --color-4: #FFB703 ;
+    --color-5: #FB8500 ;
+  
+    
+    --font-1:#fff;
+    --header: #2d023457 ;
+    --button-defalt: rgba(87, 178, 235, 0.478);
+
+    --bg-1:#4f2429 ;
+    --bg-2:#0b2430 ;
+
+    --shadow-1: rgba(248, 186, 100, 0.64);
+
+    --input-1: #80bed1b7;
+    --input-2: #202024b1;
+    /* --input-3:rgba(196, 206, 223, 0.806); */
+
+    --placeholder-1:#DEE2E6;
+
+    --form-background:rgba(18, 18, 23, 0.505);
+
+    --grey-0:  #0A0C0D;
+    --grey-1:  #212529;
+    --grey-2:  #495057;
+    --grey-3:  #868E96;
+    --grey-4:  #DEE2E6;
+
+    --white:   #FFFFFF;
+
+    --black:   #000000;
+}
+
+.dark-mode:root {
+    --color-1: #8ECAE6 ;
+    --color-2: #219EBC ;
+    --color-3: #4f1b01b2 ;
+    --color-4: #FFB703 ;
+    --color-5: #FB8500 ;
+
+    --font-1:rgb(0, 0, 0);
+    --button-defalt: #a60e7ba9;
+    
+    --bg-1:#FB8500 ;
+    --bg-2:#a60e7b ;
+
+    --shadow-1: rgba(0, 0, 0, 0.878);
+
+    --input-1: #f6ba9279;
+    --input-2: #b4b1ae89;
+    --input-3:rgba(247, 235, 217, 0.764);
+
+    --placeholder-1:#0f0f10;
+
+    --form-background:rgba(249, 225, 173, 0.617);
+
+
+    --grey-0:  #0A0C0D;
+    --grey-1:  #212529;
+    --grey-2:  #495057;
+    --grey-3:  #868E96;
+    --grey-4:  #DEE2E6;
+
+    --white:   #FFFFFF;
+
+    --black:   #000000;
+}
