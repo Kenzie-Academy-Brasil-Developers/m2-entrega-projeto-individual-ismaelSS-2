@@ -1,7 +1,8 @@
 body{
     background-image: linear-gradient(var(--bg-1), var(--bg-2));
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
+    max-width: 100vw;
     background-color: var(--color-5);
     z-index: 2;
     display: flex;
@@ -18,7 +19,7 @@ header{
     background-color:  var(--header);
     box-shadow: 0px 0px 20px  var(--shadow-1);
     backdrop-filter: blur(2px);
-    z-index: 2;
+    z-index: 15;
 }
 
 header > h1{
@@ -27,6 +28,35 @@ header > h1{
     font-weight: 600;
 }
 
-.display-none{
-    display: none;
+
+.ver-parceiros{
+    position: absolute;
+    top:500px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: calc(50vw - 130px);
+}
+
+.ver-parceiros h2{
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--font-1);
+}
+
+.ver-parceiros > div{
+    border: 2px solid;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ver-parceiros img{
+    height: 70px;
+    width: 70px;
 }

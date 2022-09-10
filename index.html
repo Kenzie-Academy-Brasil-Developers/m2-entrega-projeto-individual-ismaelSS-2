@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./src/css/buttons.css">
     <link rel="stylesheet" href="./src/css/modal-erro-cadastro.css">
     <link rel="stylesheet" href="./src/css/modal-sucesso-cadastro.css">
+    <link rel="stylesheet" href="./src/css/lista-empresas-index.css">
     <link rel="stylesheet" href="./src/css/index.css">
 
     <script  src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
@@ -26,6 +27,8 @@
     <script defer type="module" src="./src/js/login.js"></script>
     <script defer type="module" src="./src/js/cadastro.js"></script>
     <script defer type="module" src="./src/js/assets.js"></script>
+    <script defer type="module" src="./src/js/ver-parceiros.js"></script>
+    <script defer type="module" src="./src/js/criar-options.js"></script>
 
     <title>business manager</title>
 </head>
@@ -44,7 +47,7 @@
     </div>
 </header>
     
-<section class="formulario login display-none">
+<section class="formulario login ">
     <div class="formulario__div">
        <h2>Login</h2>
     <form>
@@ -57,16 +60,18 @@
     </div>
 </section>
 
-<section class="formulario cadastro ">
+<section class="formulario cadastro display-none">
     <div class="formulario__div">
         <h2>Cadastro</h2>
-     <form>
+     <form class="qualquer">
          <input type="text" class="input-padrao" placeholder="digite seu e-mail">
          <input type="password" class="input-padrao" placeholder="digite sua senha">
          <input type="text" class="input-padrao" placeholder="nivel profissional">
          <input type="text" class="input-padrao" placeholder="nome de usuario">
-         <button class="button-padrao" type="button">Cadastrar</button>
-        </form>
+         <button class="button-padrao" type="submit">Cadastrar</button>
+    </form>
+    <span>Já possui conta?</span>
+    <button class="button-padrao">Fazer login</button>
     </div>
 </section>
 
@@ -74,7 +79,18 @@
 
 </section>
 
+<div class="ver-parceiros">
+    <h2>Parceiros Cadastrados</h2>
+    <div>
+        <img src="./src/img/down-arrow.png" alt="">
+    </div>
+</div>
 
+<section class="lista">
+    <select name="" id="">  
+    </select>
+    <ul></ul>
+</section>
     <ul class="cubes">
         <li></li>
         <li></li>
@@ -88,8 +104,7 @@
         <li></li>
     </ul>
 
-</div>
+<!-- </section> -->
 
-    
 </body>
 </html>

@@ -1,8 +1,9 @@
-import {url} from "./assets.js";
+import {url,sectionLogin,sectionCadastro} from "./assets.js";
 
 const buttonCadastrar = document.querySelector('.cadastro button')
+const qualquer = document.querySelector('.qualquer')
 
-buttonCadastrar.addEventListener('click', e =>{
+qualquer.addEventListener('submit', e =>{
     e.preventDefault()
     console.log(e.target)
     pegarDadosCadastro()
@@ -17,6 +18,7 @@ function pegarDadosCadastro(){
          profissional_level : inputsCadastro[2].value,
          username : inputsCadastro[3].value
     }
+    console.log(dados);
  
     fazerCadastro(dados)
  }
@@ -33,9 +35,16 @@ function pegarDadosCadastro(){
     .then(resp => {
         console.log(resp);
     if(resp.error){
-        mostrarErro(resp.error[0])
+        if(dados.email ===''){
+            mostrarErro('Preencha o campo de e-mail')
+        }else if(dados.password ===''){
+            mostrarErro('Preencha o campo de senha')
+        }else{
+            mostrarErro(resp.error[0])
+        }
     }else{
         criarModalSucesso()
+        esconderCadastroMostarLogin()
     }
     })
     .catch(erro => {
@@ -69,9 +78,8 @@ function mostrarErro(erro){
    divErro.append(subDiv)
 
    temp.append(divErro)
-
    incrementarClickFecharErro()
-   window.alert('alerta do mostrar erro pos chamada do incrementar')
+   
 }
 
 
@@ -82,7 +90,6 @@ function incrementarClickFecharErro(){
 
     buttonFecharErro.addEventListener('click', e => {
         e.preventDefault()
-        // console.log('dfdfdgdf');
         const temp = document.querySelector('.temporarios')
 
         temp.innerHTML =''
@@ -109,8 +116,16 @@ function incrementarClickFecharErro(){
    divErro.append(subDiv)
 
    temp.append(divErro)
-//    setInterval(e=>{}3000)
-//    window.alert('sdssddsds')
+ }
+
+// FUNÇÃO IR PARA O LOGIN
+const buttoIrLogin = document.querySelectorAll('.cadastro button')[1]
+buttoIrLogin.addEventListener('click', esconderCadastroMostarLogin)
+
+
+ function esconderCadastroMostarLogin(){
+    sectionCadastro.classList.add('display-none')
+    sectionLogin.classList.remove('display-none')
  }
 
  export{mostrarErro, incrementarClickFecharErro}

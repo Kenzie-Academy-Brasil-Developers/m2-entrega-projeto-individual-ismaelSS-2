@@ -1,0 +1,85 @@
+.visaoGeral__div > h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.visaoGeral__div__visao__setor{
+    background-color: blueviolet;
+    display: flex;
+    gap: 8px;
+    border: 2px solid;
+    overflow-y:hidden;
+    max-width: fit-content;
+}
+
+.visaoGeral__div__visao__setor li{
+    border-right: 1px solid;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    line-height: 30px;
+    width: initial;
+    cursor: pointer;
+}
+
+.visaoGeral__div__visao__empresa{
+    background-color: rgb(159, 43, 226);
+    height: 25px;
+    line-height: 25px;
+    display: flex;
+    box-sizing: content-box;
+    gap: 10px;
+    border: 2px solid;
+    overflow-y:hidden;
+    max-width: fit-content;
+}
+
+.visaoGeral__div__visao__empresa li{
+    border-right: 1px solid;
+    padding-left: 8px;
+    padding-right: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.visaoGeral__div__visao__departamento{
+    display: flex;
+    gap: 10px;
+    max-width: fit-content;
+    background-color: rgb(211, 43, 226);
+    border: 2px solid;
+    overflow-y:hidden;
+}
+
+.visaoGeral__div__visao__departamento li{
+    padding-left: 8px;
+    padding-right: 10px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-right: 1px solid;
+    cursor: pointer;
+}
+
+.visaoGeral__div__visao__funcionarios{
+    background-color: rgb(226, 43, 214);
+    display: flex;
+    gap: 10px;
+    border: 1px solid ;
+    max-width: fit-content;
+    overflow-y:hidden;
+}
+
+.visaoGeral__div__visao__funcionarios li{
+    border-right: 1px solid;
+    padding-left: 8px;
+    padding-right: 10px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+}

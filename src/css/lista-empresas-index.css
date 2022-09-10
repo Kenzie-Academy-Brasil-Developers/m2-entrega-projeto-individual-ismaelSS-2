@@ -1,0 +1,28 @@
+.lista{
+    width: 350px;
+    height: 80vh;
+    background-color: rgba(230, 189, 67, 0.513);
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: calc( 50vw - 175px);
+    top: 115vh;
+}
+
+.lista ul{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lista ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.lista ul li h3{
+    font-size: 18px;
+    font-weight: 600;
+}

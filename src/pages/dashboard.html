@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="./src/img/flavicon.png">
+    
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/visao-geral.css">
+
+    <script defer type="module" src="../js/menu-nav.js"></script>
+    <script defer type="module" src="../js/visao-geral.js"></script>
+    <script defer type="module" src="../js/menu-dashborad.js"></script>
+
+
+    <title>business manager</title>
+</head>
+<body>
+    <header>
+        <h1>business manager</h1>
+        <button class="button-menu"></button>
+        <nav class="nav ">
+            <ul>
+                <li class="menuNav-visaoGeral">visão geral</li>
+                <li class="menuNav-criarEmpresa">criar empresa</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="visaoGeral">
+        <div class="visaoGeral__div">
+            <h2>Visão geral</h2>
+
+            <div class="visaoGeral__div__visao">
+                <ul class="visaoGeral__div__visao__setor"></ul>
+                <ul class="visaoGeral__div__visao__empresa"></ul>
+                <ul class="visaoGeral__div__visao__departamento"></ul>
+                <ul class="visaoGeral__div__visao__funcionarios"></ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
