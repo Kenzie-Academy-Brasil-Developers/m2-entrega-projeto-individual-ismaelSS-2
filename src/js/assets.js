@@ -1,4 +1,4 @@
-const url = 'https://localhost:6278'
+const url = 'http://localhost:6278'
 const sectionLogin = document.querySelector('.login')
 const sectionCadastro = document.querySelector('.cadastro')
 const uuidUsuario = localStorage.getItem('@BM:uuid')

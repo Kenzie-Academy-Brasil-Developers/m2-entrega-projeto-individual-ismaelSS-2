@@ -35,7 +35,8 @@ async function cadastrarEmpresa(dados){
        .then(resp => {
            console.log(resp);
            if(resp.error){
-            window.alert(resp.error[0])
+               console.log(resp);
+               window.alert(resp.error[0])
            }else{
             window.alert('empresa cadastrada com sucesso')
            }

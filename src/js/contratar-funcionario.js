@@ -1,6 +1,6 @@
 import { url, tokenUsuario } from "./assets.js";
 
-const buttonDemitir = document.querySelector('button-contratar')
+const buttonDemitir = document.querySelector('.button-contratar')
 
 buttonDemitir.addEventListener('click', e =>{
     e.preventDefault()
@@ -30,7 +30,6 @@ async function contratarFuncionario(dados){
        }).then(resp => resp.json())
        .then(resp => {
            console.log(resp);
-           window.alert('dddddd')
         })
        .catch(erro => {
            console.error('error:',erro)
