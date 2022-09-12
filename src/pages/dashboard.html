@@ -10,13 +10,19 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/colors.css">
     <link rel="stylesheet" href="../css/font.css">
-    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/visao-geral.css">
+    <link rel="stylesheet" href="../css/cadastrar-empresa.css">
+    <link rel="stylesheet" href="../css/contratar-funcionario.css">
+    <link rel="stylesheet" href="../css/gerenciar-departamento.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 
     <script defer type="module" src="../js/menu-nav.js"></script>
     <script defer type="module" src="../js/visao-geral.js"></script>
     <script defer type="module" src="../js/menu-dashborad.js"></script>
-
+    <script defer type="module" src="../js/demitir-funcionario.js"></script>
+    <script defer type="module" src="../js/contratar-funcionario.js"></script>
+    <script defer type="module" src="../js/gerenciar-departamento.js"></script>
+    <script defer type="module" src="../js/cadastrar-empresa.js"></script>
 
     <title>business manager</title>
 </head>
@@ -28,11 +34,13 @@
             <ul>
                 <li class="menuNav-visaoGeral">visão geral</li>
                 <li class="menuNav-criarEmpresa">criar empresa</li>
+                <li class="menuNav-gerenciarFuncionarios">gerenciar funcionarios</li>
+                <li class="menuNav-gerenciarDepartamentos">gerenciar departamentos</li>
             </ul>
         </nav>
     </header>
 
-    <section class="visaoGeral">
+    <section class="visaoGeral display-none">
         <div class="visaoGeral__div">
             <h2>Visão geral</h2>
 
@@ -43,6 +51,89 @@
                 <ul class="visaoGeral__div__visao__funcionarios"></ul>
             </div>
         </div>
+    </section>
+
+    <section class="criarEmpresa display-none">
+        <div class="criarEmpresa__div">
+            <h2>Cadastrar Empresa</h2>
+            <form>
+                <input type="text" placeholder="Nome da empresa">
+                <input type="text" placeholder="Horário de funcionamento">
+                <input type="text" placeholder="Descrição empresa">
+                <input type="text" placeholder="uuid setor">
+                <button class="button-criarEmpresa">Cadastrar</button>
+            </form>
+        </div>
+
+        <div class="colinhaCriarEmpresa">
+            <h2> colinha</h2>
+            <span>uuid Alimenticio:  a5f0de9f-95f2-4292-a785-2461992daaa3</span>
+
+            <span>uuid Varejo:  b6fa0134-50eb-4446-a469-6a2104fdb11e</span>
+
+            <span>uuid Textil:  19496ca9-39ca-480f-8f01-4f704b398c9d</span>
+
+            <span>uuid Manufatura:  32efccd9-73dc-4d54-9301-0163f9185f90</span>
+
+            <span>uuid Aeroespacial:  216f30b4-314d-4527-8053-30fd21046486</span>
+
+            <span>uuid Automotiva:  cbaea998-dfc5-40b9-8524-2e47b68b462f</span>
+
+            <span>uuid TI:  fb820379-1b40-4977-95f1-b8c28a6c7e32</span>
+
+            <span>uuid Atacado:  f277c064-ece3-4539-a66c-02a31ca092dc</span>
+        </div>
+    </section>
+
+    <section class="gerenciarFuncionarios display-none">
+        <section class="gerenciarFuncionarios__contratar">
+            <div class="gerenciarFuncionarios__contratar__div">
+                <form>
+                    <input type="text" placeholder="uuid do usuario">
+                    <input type="text" placeholder="uuid do departamento">
+
+                    <button class="button-contratar">Contratar</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="gerenciarFuncionarios__demitir">
+            <div class="gerenciarFuncionarios__demitir__div">
+                <form>
+                    <input type="text" placeholder="uuid do usuario">
+                    <button class="button-demitir">Demitir</button>
+                </form>
+            </div>
+        </section>
+
+    </section>
+    <section class="gerenciarDepartamentos">
+        
+        <section class="criarDepartamento">
+            <form>
+                <input type="text" placeholder="Nome do departamento">
+                <input type="text" placeholder="Descrição do departamento">
+                <input type="text" placeholder="uuid da empresa">
+                <button class="button-criarDeparto">Criar Departamento</button>
+            </form>
+        </section>
+
+        <section class="editarDepatamento">
+            <form>
+                <input type="text" placeholder="uuid do departamento">
+                <input type="text" placeholder="descrição">
+                <button class="button-editarDepartamento">Editar</button>
+            </form>
+        </section>
+
+        <section class="deletarDepartamento">
+            <form>
+                <input type="text" placeholder="uuid do departamento">
+                <button class="button-deletarDepartamento">Deletar</button>
+            </form>
+        </section>
+
+        
     </section>
 </body>
 </html>

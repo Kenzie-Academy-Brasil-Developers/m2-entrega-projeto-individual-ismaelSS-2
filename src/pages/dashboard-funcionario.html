@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business manager</title>
+
+    <link rel="icon" type="image/x-icon" href="./src/img/flavicon.png">
+    
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/dashboard-funcionario.css">
+    <link rel="stylesheet" href="../css/gerencir-conta.css">
+    <link rel="stylesheet" href="../css/font.css">
+
+
+    <script defer type="module" src="../js/menu-dashboradFuncionario.js"></script>
+    <script defer type="module" src="../js/menu-nav.js"></script>
+    <script defer type="module" src="../js/gerenciar-conta.js"></script>
+
+
+</head>
+<body>
+    <header>
+        <h1>business manager</h1>
+        <button class="button-menu"></button>
+        <nav class="nav ">
+            <ul>
+                <li class="menuNav-gerenciarConta">Gerenciar Conta</li>
+                <li class="menuNav-visializarDepartamento">Visualizar Departamento</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gerenciarConta">
+
+        <section class="gerenciarConta__minhaInformacoes">
+            <h2>minhas informações</h2>
+            <div class="gerenciarConta__minhaInformacoes__div">
+                <p>Nome de usuario: <span></span></p>
+                <p>E-mail: <span></span></p>
+                <p>Nivel profissional: <span></span></p>
+                <p>Modalidade: <span></span></p>
+                <p>Meu uuid: <span></span></p>
+                <p>Uuid do departamento: <span></span></p>
+            </div>
+        </section>
+
+        <section class="gerenciarConta__editarConta">
+            <h2>Editar minha conta</h2>
+            <span>Todos os campos devem ser preenchidos e devem ter valores deiferentes</span>
+            <form>
+                <input type="text" placeholder="Nome de usuario">
+                <input type="email" placeholder="email">
+                <input type="text" placeholder="senha">
+                <button class="button-editarConta">Editar Conta</button>
+            </form>
+        </section>
+
+    </section>
+
+    <section class="visializarDepartamento">
+        
+    </section>
+</body>
+</html>

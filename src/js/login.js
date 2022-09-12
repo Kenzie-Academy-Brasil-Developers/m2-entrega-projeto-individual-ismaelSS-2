@@ -30,14 +30,20 @@ async function fazerLogin(dados){
     .then(resp => {
         console.log(resp);
     if(resp.error){
-        console.log('deu erro');
+        console.log(resp.error);
         criarModalErro()
     }else{
         localStorage.setItem('@BM:token', resp.token)
         localStorage.setItem('@BM:uuid', resp.user_uuid)
+        localStorage.setItem('@BM:uuid_funcionario', resp.uuid)
         localStorage.setItem('@BM:is_admin', resp.is_admin)
         window.location.replace('/src/pages/dashboard.html')
         
+        if(resp.is_admin === true){
+            window.location.assign('/src/pages/dashboard.html')
+        }else{
+            window.location.assign('/src/pages/dashboard-funcionario.html')
+        }
     }
     })
     .catch(erro => {

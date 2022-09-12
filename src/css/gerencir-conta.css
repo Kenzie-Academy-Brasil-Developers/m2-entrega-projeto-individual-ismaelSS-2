@@ -1,0 +1,51 @@
+.gerenciarConta{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.gerenciarConta section{
+    width: 350px;
+}
+
+.gerenciarConta h2{
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.gerenciarConta__minhaInformacoes__div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gerenciarConta__minhaInformacoes__div span{
+    font-weight: 500;
+}
+
+.gerenciarConta__editarConta span{
+    color: var(--grey-3);
+}
+.gerenciarConta__editarConta form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.gerenciarConta__editarConta input{
+    height: 50px;
+    border: 1px solid var(--grey-4);
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.gerenciarConta__editarConta button{
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(191, 222, 99);
+    margin-top: 20px;
+}

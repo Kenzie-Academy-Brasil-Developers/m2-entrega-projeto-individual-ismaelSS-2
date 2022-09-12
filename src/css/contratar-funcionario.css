@@ -1,0 +1,33 @@
+.gerenciarFuncionarios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.gerenciarFuncionarios input{
+    height: 50px;
+    font-size: 14px;
+    border: 1px solid rgb(167, 160, 160);
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.gerenciarFuncionarios button{
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(75, 156, 228);
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.gerenciarFuncionarios section div{
+    width: 350px;
+}
+
+.gerenciarFuncionarios form{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}

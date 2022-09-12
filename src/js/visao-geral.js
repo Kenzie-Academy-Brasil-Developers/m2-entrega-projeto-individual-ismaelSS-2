@@ -1,4 +1,4 @@
-import { url } from "./assets.js";
+import { url, tokenUsuario } from "./assets.js";
 
 const ulSetor = document.querySelector('.visaoGeral__div__visao__setor')
 const ulEmpresas = document.querySelector('.visaoGeral__div__visao__empresa')
@@ -10,7 +10,7 @@ async function pegarSetores() {
     const lista = await fetch(`${url}/sectors`, {
         method: 'GET',
         headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNjM2MjMzZGUtZDY2My00OGI4LWFiZmYtZmQzNzgxMTU5Mjg4IiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTY2MjE0NTk2MSwiZXhwIjoxNjYzMDA5OTYxLCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ.e2l3VxvLDDD8yDDcfLAXGi6pY6_X9AinAhuk673tkXs'
+            'Authorization': `Bearer ${tokenUsuario}`
         }
     }).then(resp => resp.json())
         .then(resp => {
@@ -78,7 +78,7 @@ function inserirEmpresasNaLista(list){
 }
 
 
-// LISTAR SETORES
+// LISTAR DEPARTAMENTOS
 
 ulEmpresas.addEventListener('click', e => {
     if(e.target.tagName == "LI"){
@@ -91,7 +91,7 @@ async function pegarDepartamentos(uuid){
     await fetch(`${url}/departments/${uuid}`, {
         method: 'GET',
         headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMjdjOTc4Y2MtMzhhNi00NzMzLTk5YTYtZmVmYjkwZWJjNzEyIiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTY2MjEyNDEzOCwiZXhwIjoxNjYyOTg4MTM4LCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ.m4vRB3gWfnCBcELPgqan-EfIgRehpvgtZvCP3PSuG4k'
+            'Authorization': `Bearer ${tokenUsuario}`
         }
     }).then(resp => resp.json())
         .then(resp => {
@@ -117,7 +117,6 @@ function inserirDepartamentosNaLista(list){
 // LISTAR FUNCIONARIOS DO DEPARTAMENTO
 ulDepartmento.addEventListener('click', e => {
     if(e.target.tagName == "LI"){
-        console.log('departamentoda empresa');
         pegarTodosFuncionario(e.target.id)
     }
 })
@@ -126,7 +125,7 @@ async function pegarTodosFuncionario(idDepartamento){
     await fetch(`${url}/users`, {
         method: 'GET',
         headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMjdjOTc4Y2MtMzhhNi00NzMzLTk5YTYtZmVmYjkwZWJjNzEyIiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTY2MjA4MDM2OSwiZXhwIjoxNjYyOTQ0MzY5LCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ.uiT47vx9h9kcwl2vn8VmH7NkyS9xBeNPezfRN_4bK2g'
+            'Authorization': `Bearer ${tokenUsuario}`
         }
     }).then(resp => resp.json())
         .then(resp => {
@@ -146,7 +145,6 @@ function filtrarFuncionariosPorSetor(list, idDepartamento){
             li.innerText = e.username
             li.setAttribute('id', e.uuid)
             ulFuncionarios.append(li)
-            console.log('dvdvd');
         }
     })
 }

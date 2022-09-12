@@ -60,3 +60,7 @@ header > h1{
     height: 70px;
     width: 70px;
 }
+
+.display-none{
+    display:none;
+}

@@ -1,4 +1,4 @@
-import { url } from "./assets.js";
+import { url, tokenUsuario } from "./assets.js";
 
 
 const select = document.querySelector('.lista select')
@@ -8,7 +8,7 @@ async function listarSection() {
     const lista = await fetch(`${url}/sectors`, {
         method: 'GET',
         headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNjM2MjMzZGUtZDY2My00OGI4LWFiZmYtZmQzNzgxMTU5Mjg4IiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTY2MjE0NTk2MSwiZXhwIjoxNjYzMDA5OTYxLCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ.e2l3VxvLDDD8yDDcfLAXGi6pY6_X9AinAhuk673tkXs'
+            'Authorization': `Bearer ${tokenUsuario}`
         }
     }).then(resp => resp.json())
         .then(resp => {

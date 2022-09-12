@@ -1,0 +1,28 @@
+.gerenciarDepartamentos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.gerenciarDepartamentos section{
+    width: 350px;
+}
+
+.gerenciarDepartamentos form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gerenciarDepartamentos input{
+    height: 50px;
+    border: 1px solid rgb(196, 196, 187);
+}
+
+.gerenciarDepartamentos button{
+    height: 50px;
+    margin-top: 10px;
+    background-color: rgb(249, 209, 108);
+}

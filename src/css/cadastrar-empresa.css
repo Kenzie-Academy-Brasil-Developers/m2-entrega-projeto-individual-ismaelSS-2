@@ -1,0 +1,33 @@
+.criarEmpresa{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.criarEmpresa h2{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+.criarEmpresa form{
+    display: flex;
+    flex-direction: column;
+}
+
+.colinhaCriarEmpresa{
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.criarEmpresa__div input{
+    height: 50px;
+}
+
+.criarEmpresa__div button{
+    height: 50px;
+    background-color: rgb(245, 206, 155);
+    width: 350px;
+}
