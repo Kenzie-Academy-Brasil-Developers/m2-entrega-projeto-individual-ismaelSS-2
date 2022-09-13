@@ -15,7 +15,6 @@ async function pegarInfosPessoais(tokenUsuario){
         }
        }).then(resp => resp.json())
        .then(resp => {
-           console.log(resp);
        if(resp.error){
            console.log(resp)
        }else{
@@ -42,8 +41,10 @@ async function pegarInfosPessoais(tokenUsuario){
             if(resp.department_uuid == null){
                 spans[5].innerText = 'não atribuido a nenhum departamento'
             }else{
-                spans[5].innerText = respdepartment_uuid
+                spans[5].innerText = resp.department_uuid
             } 
+
+            localStorage.setItem('@BM:uuidDepartamentoFuncionario', resp.department_uuid)
 
 
        }
