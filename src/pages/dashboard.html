@@ -21,6 +21,7 @@
     <script defer type="module" src="../js/menu-dashborad.js"></script>
     <script defer type="module" src="../js/demitir-funcionario.js"></script>
     <script defer type="module" src="../js/contratar-funcionario.js"></script>
+    <script defer type="module" src="../js/deletar-conta.js"></script>
     <script defer type="module" src="../js/gerenciar-departamento.js"></script>
     <script defer type="module" src="../js/cadastrar-empresa.js"></script>
 
@@ -43,7 +44,7 @@
     <section class="visaoGeral display-none">
         <div class="visaoGeral__div">
             <h2>Visão geral</h2>
-
+            <span>click encima no nome da empresa para ver seus departamentos</span>
             <div class="visaoGeral__div__visao">
                 <ul class="visaoGeral__div__visao__setor"></ul>
                 <ul class="visaoGeral__div__visao__empresa"></ul>
@@ -65,24 +66,6 @@
             </form>
         </div>
 
-        <div class="colinhaCriarEmpresa">
-            <h2> colinha</h2>
-            <span>uuid Alimenticio:  a5f0de9f-95f2-4292-a785-2461992daaa3</span>
-
-            <span>uuid Varejo:  b6fa0134-50eb-4446-a469-6a2104fdb11e</span>
-
-            <span>uuid Textil:  19496ca9-39ca-480f-8f01-4f704b398c9d</span>
-
-            <span>uuid Manufatura:  32efccd9-73dc-4d54-9301-0163f9185f90</span>
-
-            <span>uuid Aeroespacial:  216f30b4-314d-4527-8053-30fd21046486</span>
-
-            <span>uuid Automotiva:  cbaea998-dfc5-40b9-8524-2e47b68b462f</span>
-
-            <span>uuid TI:  fb820379-1b40-4977-95f1-b8c28a6c7e32</span>
-
-            <span>uuid Atacado:  f277c064-ece3-4539-a66c-02a31ca092dc</span>
-        </div>
     </section>
 
     <section class="gerenciarFuncionarios display-none">
@@ -106,7 +89,17 @@
             </div>
         </section>
 
+        <section class="gerenciarFuncionarios__deletarConta">
+            <div class="gerenciarFuncionarios__deletarConta__div">
+                <form>
+                    <input type="text" placeholder="uuid do funcionario">
+                    <button class="button-deletarConta">Deletar conta</button>
+                </form>
+            </div>
+        </section>
+
     </section>
+
     <section class="gerenciarDepartamentos">
         
         <section class="criarDepartamento">

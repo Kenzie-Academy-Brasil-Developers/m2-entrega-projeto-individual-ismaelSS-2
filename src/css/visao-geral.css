@@ -4,6 +4,10 @@
     margin-bottom: 10px;
 }
 
+.visaoGeral__div > span{
+    color: red;
+}
+
 .visaoGeral__div__visao__setor{
     background-color: blueviolet;
     display: flex;
@@ -26,9 +30,16 @@
     cursor: pointer;
 }
 
+li{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 .visaoGeral__div__visao__empresa{
     background-color: rgb(159, 43, 226);
-    height: 25px;
+    height: 75px;
     line-height: 25px;
     display: flex;
     box-sizing: content-box;
@@ -36,6 +47,12 @@
     border: 2px solid;
     overflow-y:hidden;
     max-width: fit-content;
+    font-weight: 600;
+}
+
+.visaoGeral__div__visao__empresa  span{
+    background-color: rgb(78, 159, 186);
+    font-weight: 500;
 }
 
 .visaoGeral__div__visao__empresa li{

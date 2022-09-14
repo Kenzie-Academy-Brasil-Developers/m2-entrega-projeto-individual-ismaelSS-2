@@ -73,6 +73,15 @@ function inserirEmpresasNaLista(list){
         const li = document.createElement('li')
         li.innerText = e.name
         li.setAttribute('id', e.uuid)
+
+        const horario =document.createElement('span')
+        horario.innerText= e.opening_hours
+
+        const descricao = document.createElement('span')
+        descricao.innerText = e.description
+
+        li.append(horario,descricao)
+
         ulEmpresas.append(li)
     })
 }
